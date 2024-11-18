@@ -1,16 +1,132 @@
 @import url('../fonts/Poppins.css');
 :root{
-    --color-green: #819B57;
-    --color-white: #FAF4EA;
-    --color-green-black: #465929;
-    --color-grey: #D9D9D9;
+    --color-primary-light: #F4f4EA;
+    --color-primary-dark: #31261A;
+    --color-primary-green: #819B57;
+    --color-secondary-dark: #465929;
+    --color-secondary-light: #CFCFBC;
+    --color-secondary-braun: #A18268;
 }
 body{
     font-family: "Poppins-Regular", sans-serif;
     font-style: 18px;
     font-weight: 400;
     line-height: 1.5;
-    background-color:  var(--color-white);
+    background-color:  var(--color-primary-light);
+    overflow-x: hidden;
 }
 ul{ list-style-type: none; }
 a{ text-decoration: none; }
+.link{
+    color: var(--color-primary-light);
+    font-style: 18px;
+    font-weight: 600;
+    font-family: 'Poppins-SemiBold', sans-serif;
+}
+.link:hover{ color: var(--color-primary-green); }
+/** top main **/
+.main-title{
+    font-family: 'Poppins-Black', sans-serif;
+    font-size: 128px;
+    color: var(--color-primary-light);
+    text-align: center;
+}
+.main-title span{
+    color: var(--color-primary-green);
+}
+/** main top section **/
+.main-top-section{
+    width: 100dvw;
+    height: auto;
+    background-color: var(--color-primary-green);
+    padding: 16px 99px;
+}
+.main-top-section .main-top-item{
+    font-size: 20px;
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 300;
+    color: var(--color-primary-light);
+}
+/** new format traditions section **/
+.new-format-traditions{
+    font-size: 64px;
+    font-family: 'Poppins-Black', sans-serif;
+    color: var(--color-primary-dark);
+    font-weight: 900;
+    line-height: 1.5;
+    text-align: center;
+}
+.traditions-section p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Poppins-Regular', sans-serif;
+}
+.traditions-section p span{
+    color: var(--color-primary-green);
+    font-weight: 600;
+    font-family: 'Poppins-SemiBold', sans-serif;
+}
+.traditions-section p .shop-bakery{
+    text-transform: uppercase;
+}
+/** chefs section **/
+.chefs-section .chefs-title{
+    font-weight: 900;
+    font-size: 64px;
+    font-family: 'Poppins-Black', sans-serif;
+    color: var(--color-primary-dark);
+    text-align: center;
+}
+.chefs-section .chefs-title span{
+    color: var(--color-secondary-dark);
+}
+.chefs-section .chef{
+    font-weight: 600;
+    font-size: 32px;
+    font-family: 'Poppins-SemiBold', sans-serif;
+    color: var(--color-primary-dark);
+}
+.chefs-section p{
+    font-family: 'Poppins-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-primary-dark);
+}
+/** formats section **/
+.formats-section .formats-title{
+    font-weight: 900;
+    font-size: 64px;
+    font-family: 'Poppins-Black', sans-serif;
+    color: var(--color-primary-dark);
+    text-align: center;
+}
+.formats-section .formats-title-card{
+    color: var(--color-primary-light);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins-SemiBold', sans-serif;
+}
+.formats-section .formats-list li{
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-primary-light);
+    font-family: 'Poppins-Light', sans-serif;
+}
+/**contact forms **/
+.contacts-section .contacts-title{
+    font-weight: 900;
+    font-size: 64px;
+    font-family: 'Poppins-Black', sans-serif;
+    color: var(--color-primary-dark);
+}
+.contacts-section .contacts-text{
+    color: var(--color-secondary-dark);
+    font-weight: 400;
+}
+.contacts-section .primery-polisy{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins-Regular', sans-serif;
+    color: var(--color-secondary-dark);
+    text-align: center;
+}
