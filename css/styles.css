@@ -7,6 +7,7 @@
     --color-secondary-light: #CFCFBC;
     --color-secondary-braun: #A18268;
 }
+*{ box-sizing: border-box; }
 body{
     font-family: "Poppins-Regular", sans-serif;
     font-style: 18px;
@@ -14,7 +15,9 @@ body{
     line-height: 1.5;
     background-color:  var(--color-primary-light);
     overflow-x: hidden;
+    margin: 0;
 }
+h1,h2,h3,h4,h5,h6,p{ margin: 0; }
 ul{ list-style-type: none; }
 a{ text-decoration: none; }
 .link{
@@ -24,6 +27,18 @@ a{ text-decoration: none; }
     font-family: 'Poppins-SemiBold', sans-serif;
 }
 .link:hover{ color: var(--color-primary-green); }
+.traditions-section,
+.chefs-section,
+.formats-section,
+.contacts-section{ padding: 48px 0; }
+.visually-hidden{position: absolute;left: -10000px;top: auto;width: 1px;height: 1px;overflow: hidden;}
+.main-holder {
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
 /** top main **/
 .main-title{
     font-family: 'Poppins-Black', sans-serif;
@@ -34,6 +49,21 @@ a{ text-decoration: none; }
 .main-title span{
     color: var(--color-primary-green);
 }
+.button{
+    background-color: var(--color-primary-green);
+    color: var(--color-primary-light);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins-SemiBold', sans-serif;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--color-primary-green)
+}
+.button:hover,
+.button:focus,
+.button:active{ background-color: transparent; color: var(--color-secondary-dark);}
 /** main top section **/
 .main-top-section{
     width: 100dvw;
@@ -55,11 +85,13 @@ a{ text-decoration: none; }
     font-weight: 900;
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 42px;
 }
 .traditions-section p{
     font-size: 18px;
     font-weight: 400;
     font-family: 'Poppins-Regular', sans-serif;
+    padding-top: 96px;
 }
 .traditions-section p span{
     color: var(--color-primary-green);
@@ -76,6 +108,7 @@ a{ text-decoration: none; }
     font-family: 'Poppins-Black', sans-serif;
     color: var(--color-primary-dark);
     text-align: center;
+    margin-bottom: 80px;
 }
 .chefs-section .chefs-title span{
     color: var(--color-secondary-dark);
@@ -85,6 +118,7 @@ a{ text-decoration: none; }
     font-size: 32px;
     font-family: 'Poppins-SemiBold', sans-serif;
     color: var(--color-primary-dark);
+    margin-bottom: 16px;
 }
 .chefs-section p{
     font-family: 'Poppins-Regular', sans-serif;
@@ -99,6 +133,7 @@ a{ text-decoration: none; }
     font-family: 'Poppins-Black', sans-serif;
     color: var(--color-primary-dark);
     text-align: center;
+    margin-bottom: 80px;
 }
 .formats-section .formats-title-card{
     color: var(--color-primary-light);
@@ -118,6 +153,7 @@ a{ text-decoration: none; }
     font-size: 64px;
     font-family: 'Poppins-Black', sans-serif;
     color: var(--color-primary-dark);
+    margin-bottom: 16px;
 }
 .contacts-section .contacts-text{
     color: var(--color-secondary-dark);
