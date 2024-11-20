@@ -9,27 +9,29 @@
   <body>
     <header>
       <div class="main-holder">
-        <nav>
-          <a href="/">
-            <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
-          </a>
-          <ul>
-            <li>
-              <a href="#traditions-section" class="link">Наші традиції</a>
-            </li>
-            <li>
-              <a href="#chefs-section" class="link">Шеф-кухарі</a>
-            </li>
-            <li>
-              <a href="#formats-section" class="link">Формати</a>
-            </li>
-            <li>
-              <a href="#contacts-section" class="link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- order a call -->
-        <button type="button" class="button">Замовити дзвінок</button>
+        <div class="box-main-header">
+          <nav class="main-nav">
+            <a href="/" class="logo-link">
+              <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
+            </a>
+            <ul class="main-menu">
+              <li>
+                <a href="#traditions-section" class="link">Наші традиції</a>
+              </li>
+              <li>
+                <a href="#chefs-section" class="link">Шеф-кухарі</a>
+              </li>
+              <li>
+                <a href="#formats-section" class="link">Формати</a>
+              </li>
+              <li>
+                <a href="#contacts-section" class="link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- order a call -->
+          <button type="button" class="button">Замовити дзвінок</button>
+        </div>
       </div>
     </header>
     <main>
@@ -39,7 +41,7 @@
           <h1 class="main-title"><span>Сучасна</span> пекарня</h1>
         </div>
       </section>
-      <section>
+      <section class="main-top">
         <div class="main-holder">
           <h2 class="visually-hidden">Наші переваги</h2>
           <ul class="main-top-section">
@@ -51,22 +53,27 @@
       </section>
       <section id="traditions-section" class="traditions-section">
         <div class="main-holder">
-          <h2 class="new-format-traditions">Новий формат традицій</h2>
-          <p>
-            <span class="shop-bakery">shop bakery</span> — це пекарня, яка взяла
-            все найкраще, і зберегла смак традиційної випічки та натуральність
-            інгредієнтів.
-          </p>
-          <p>
-            Ми працюємо як найвідоміші мережі—
-            <span>5 хвилин і замовлення готове.</span>
-            А ще у наших пекарень стильний дизайн та висока якість
-            обслуговування!
-          </p>
-          <img
-            src="./images/baker-man.jpg"
-            alt="Чоловік пекар дивиться на батони із посмішкою"
-          />
+          <div class="wrap-box-traditions">
+            <div class="box-text">
+              <h2 class="new-format-traditions">Новий формат традицій</h2>
+              <p>
+                <span class="shop-bakery">shop bakery</span> — це пекарня, яка
+                взяла все найкраще, і зберегла смак традиційної випічки та
+                натуральність інгредієнтів.
+              </p>
+              <p>
+                Ми працюємо як найвідоміші мережі—
+                <span>5 хвилин і замовлення готове.</span>
+                А ще у наших пекарень стильний дизайн та висока якість
+                обслуговування!
+              </p>
+            </div>
+            <img
+              src="./images/baker-man.jpg"
+              alt="Чоловік пекар дивиться на батони із посмішкою"
+              class="images-traditions"
+            />
+          </div>
         </div>
       </section>
       <section id="chefs-section" class="chefs-section">
@@ -177,7 +184,7 @@
               <a href="#" class="footer-link">Контакти</a>
             </li>
           </ul>
-          <button>Замовити дзвінок</button>
+          <button type="button" class="button">Замовити дзвінок</button>
         </nav>
         <address>
           <ul>
