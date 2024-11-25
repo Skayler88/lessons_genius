@@ -1,56 +1,19 @@
 @import url('../fonts/Poppins.css');
-:root{
-    --color-primary-light: #F4f4EA;
-    --color-primary-dark: #31261A;
-    --color-primary-green: #819B57;
-    --color-secondary-dark: #465929;
-    --color-secondary-light: #CFCFBC;
-    --color-secondary-braun: #A18268;
-}
-*{ box-sizing: border-box; }
-body{
-    font-family: "Poppins-Regular", sans-serif;
-    font-style: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color:  var(--color-primary-light);
-    overflow-x: hidden;
-    margin: 0;
-}
-h1,h2,h3,h4,h5,h6,p{ margin: 0; }
-ul{ list-style-type: none; }
-a{ text-decoration: none; }
-.link{
-    color: var(--color-primary-light);
-    font-style: 18px;
-    font-weight: 600;
-    font-family: 'Poppins-SemiBold', sans-serif;
-}
-.link:hover{ color: var(--color-primary-green); }
-.traditions-section,
-.chefs-section,
-.formats-section,
-.contacts-section{ padding: 48px 0; }
-.visually-hidden{position: absolute;left: -10000px;top: auto;width: 1px;height: 1px;overflow: hidden;}
-.main-holder {
-    overflow: hidden;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 15px;
-    position: relative;
-}
+@import url('./basic.css');
 /** top main **/
 .box-main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 .box-main-header .main-nav{
     display: flex;
     justify-content: start;
     align-items: center;
     position: relative;
-    width: 80%;
+    flex-grow: 1;
+    gap: 40px;
 }
 .box-main-header .main-nav .main-menu{
     display: flex;
@@ -60,11 +23,22 @@ a{ text-decoration: none; }
     gap: 64px;
     flex-grow: 1;
 }
+.link {
+    color: var(--color-primary-light);
+    font-style: 18px;
+    font-weight: 600;
+    font-family: 'Poppins-SemiBold', sans-serif;
+}
+
+.link:hover {
+    color: var(--color-primary-green);
+}
 .main-title{
     font-family: 'Poppins-Black', sans-serif;
     font-size: 128px;
     color: var(--color-primary-light);
     text-align: center;
+    margin: 275px 0;
 }
 .main-title span{
     color: var(--color-primary-green);
@@ -93,19 +67,20 @@ a{ text-decoration: none; }
 }
 .logo-link img{
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: contain;
 }
 .main-top{
     width: 100%;
     height: auto;
-    padding: 16px 99px;
+    padding: 16px 0;
     background-color: var(--color-primary-green);
 }
 .main-top-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 .main-top-section .main-top-item{
     font-size: 20px;
@@ -120,16 +95,18 @@ a{ text-decoration: none; }
     color: var(--color-primary-dark);
     font-weight: 900;
     line-height: 1.5;
-    text-align: center;
-    margin-bottom: 42px;
+    text-align: left;
 }
-.traditions-section p{
+.traditions-section .tradition-text{
     font-size: 18px;
     font-weight: 400;
     font-family: 'Poppins-Regular', sans-serif;
-    padding-top: 96px;
+    padding-top: 42px;
 }
-.traditions-section p span{
+.traditions-section .tradition-text.limited-width{
+    max-width: 335px;
+}
+.traditions-section .tradition-text span{
     color: var(--color-primary-green);
     font-weight: 600;
     font-family: 'Poppins-SemiBold', sans-serif;
@@ -149,6 +126,8 @@ a{ text-decoration: none; }
 }
 .traditions-section .wrap-box-traditions .images-traditions{
     width: 30%;
+    border-top-left-radius: 400px;
+    border-top-right-radius: 400px;
 }
 /** chefs section **/
 .chefs-section .chefs-title{
@@ -158,6 +137,20 @@ a{ text-decoration: none; }
     color: var(--color-primary-dark);
     text-align: center;
     margin-bottom: 80px;
+    max-width: 550px;
+    line-height: 1.3;
+}
+.chefs-section .box-chefs-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.chefs-section .line{
+    width: 50%;
+    height: 2px;
+    display: block;
+    position: relative;
+    background-color: var(--color-secondary-light);
 }
 .chefs-section .chefs-title span{
     color: var(--color-secondary-dark);
@@ -174,6 +167,13 @@ a{ text-decoration: none; }
     font-weight: 400;
     font-size: 18px;
     color: var(--color-primary-dark);
+}
+.chefs-section .wrap-box-chefs{
+    display: flex;
+    justify-content: space-between;
+}
+.chefs-section .wrap-box-chefs .box-chef{
+    width: 50%;
 }
 /** formats section **/
 .formats-section .formats-title{
@@ -196,6 +196,15 @@ a{ text-decoration: none; }
     color: var(--color-primary-light);
     font-family: 'Poppins-Light', sans-serif;
 }
+.formats-section .wrap-box-formats{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.formats-section .wrap-box-formats .box-format-item{
+    flex-basis: calc((100% - 40px) / 3);
+    padding: 24px;
+}
 /**contact forms **/
 .contacts-section .contacts-title{
     font-weight: 900;
@@ -214,6 +223,13 @@ a{ text-decoration: none; }
     font-family: 'Poppins-Regular', sans-serif;
     color: var(--color-secondary-dark);
     text-align: center;
+}
+.contacts-section .box-contacts{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-section .box-contacts .wrap-box-contacts{
+    
 }
 /** footer **/
 .footer-link{
